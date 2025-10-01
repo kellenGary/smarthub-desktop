@@ -46,7 +46,7 @@ async def write_test(data: dict):
 
 # Fetches all tests with pagination
 @router.get("/tests")
-async def get_tests(page: int = 1, limit: int = 25):
+async def get_tests(page: int = 1, limit: int = 10):
     # Calculate offset for pagination
     offset = (page - 1) * limit
     
@@ -61,7 +61,7 @@ async def get_tests(page: int = 1, limit: int = 25):
     # Get paginated tests
     response = (
         supabase.table("test_info")
-        .select("*, test_files(*)")
+        .select("*, test_files(displacement, velocity, heading, trajectory_x, trajectory_y, timeStamp)")
         .order("id", desc=True)  # Order by newest first
         .range(offset, offset + limit - 1)
         .execute()

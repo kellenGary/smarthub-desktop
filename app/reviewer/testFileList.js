@@ -9,7 +9,7 @@ export default function TestFileList({filters, searchTerm}) {
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
     const [pagination, setPagination] = useState(null);
-    const limit = 25;
+    const limit = 10;
 
     const fetchTestFiles = async (page = 1) => {
         setLoading(true);
