@@ -1,5 +1,7 @@
 # Smarthub Desktop
 
+CURRENT VERSION CAN BE FOUND AT https://github.com/smarthub-research/Smarthub-Desktop
+
 A cross-platform desktop application for device management, analytics, and more—built with Next.js, Electron, and Python FastAPI. 
 This application is built in partnership with The Ohio State University Smarthub Research Group.
 
