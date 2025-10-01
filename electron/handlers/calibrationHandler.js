@@ -4,7 +4,7 @@ const calibrationService = require("../services/calibrationService");
 function setupCalibrationHandlers() {
     ipcMain.handle('set-calibration', async (event, calibration) => {
         calibrationService.setCalibration(calibration);
-        return true; // <-- Return a value or a Promise
+        return true;
     });
 
     ipcMain.handle("get-calibration", async (event) => {

@@ -7,8 +7,8 @@ class CalibrationService {
 
     setCalibration(calibration) {
         this.calibration = calibration;
-        this.leftGain = calibration.left_gain;   // Backend sends left_gain (snake_case)
-        this.rightGain = calibration.right_gain; // Backend sends right_gain (snake_case)
+        this.leftGain = calibration.left_gain;
+        this.rightGain = calibration.right_gain;
         this.wheelDistance = calibration.wheel_distance;
     }
 
